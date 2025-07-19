@@ -20,6 +20,31 @@
 			<advanced>true</advanced>
 		</parameter>
 
+		<parameter name="stateBlockLength" type="integer" min="7">
+			<label>State block length</label>
+			<default>7</default>
+			<description>Length of the state block in registers to read from bus</description>
+			<advanced>true</advanced>
+		</parameter>
+
+		<parameter name="nrOfHps" type="integer" min="0" max="6">
+			<label>Number of heat pumps</label>
+			<default>0</default>
+			<description>Number of heat pumps in a WPMsystem or WPM3 based environment.</description>
+		</parameter>
+
+		<parameter name="wpmControllerId" type="integer">
+			<label>WPM Controller Identifier</label>
+			<default>390</default>
+			<description>WPM Controller Identifier (WPM3 = 390; WPM3i = 391; WPMsystem = 449).</description>
+		</parameter>
+
+		<parameter name="pollSgReady" type="boolean">
+			<label>Poll SG Ready Registers</label>
+			<default>false</default>
+			<description>Flag to enable polling of the SG Ready registers.</description>
+		</parameter>
+
 	</config-description>
 
 </config-description:config-descriptions>
