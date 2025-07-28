@@ -909,7 +909,7 @@ public class StiebelEltronHandlerAllWpm extends BaseThingHandler {
                                 String.format(CHANNEL_HP_RETURN_TEMPERATURE_FORMAT, idx + 1)),
                         getScaled(block.heatPumps[idx].temperatureReturn, 10, CELSIUS));
             } else if (!hpFeaturesObj.reported(SysInfoHpFeaturelKeys.HP_TEMPERATURE_RETURN)) {
-                logger.trace("HP" + (idx + 1) + " Return temperature not available");
+                logger.trace("HP{} Return temperature not available", idx + 1);
                 updateState(channelUID(GROUP_SYSTEM_INFORMATION_ALLWPM,
                         String.format(CHANNEL_HP_RETURN_TEMPERATURE_FORMAT, idx + 1)), UnDefType.UNDEF);
                 hpFeaturesObj.setReported(SysInfoHpFeaturelKeys.HP_TEMPERATURE_RETURN, true);
@@ -921,7 +921,7 @@ public class StiebelEltronHandlerAllWpm extends BaseThingHandler {
                                 String.format(CHANNEL_HP_FLOW_TEMPERATURE_FORMAT, idx + 1)),
                         getScaled(block.heatPumps[idx].temperatureFlow, 10, CELSIUS));
             } else if (!hpFeaturesObj.reported(SysInfoHpFeaturelKeys.HP_TEMPERATURE_FLOW)) {
-                logger.trace("HP" + (idx + 1) + " Flow temperature not available");
+                logger.trace("HP{} Flow temperature not available", idx + 1);
                 updateState(channelUID(GROUP_SYSTEM_INFORMATION_ALLWPM,
                         String.format(CHANNEL_HP_FLOW_TEMPERATURE_FORMAT, idx + 1)), UnDefType.UNDEF);
                 hpFeaturesObj.setReported(SysInfoHpFeaturelKeys.HP_TEMPERATURE_FLOW, true);
@@ -933,7 +933,7 @@ public class StiebelEltronHandlerAllWpm extends BaseThingHandler {
                                 String.format(CHANNEL_HP_HOTGAS_TEMPERATURE_FORMAT, idx + 1)),
                         getScaled(block.heatPumps[idx].temperatureFlow, 10, CELSIUS));
             } else if (!hpFeaturesObj.reported(SysInfoHpFeaturelKeys.HP_TEMPERATURE_HOTGAS)) {
-                logger.trace("HP" + (idx + 1) + " Hotgas temperature not available");
+                logger.trace("HP{} Hotgas temperature not available", idx + 1);
                 updateState(channelUID(GROUP_SYSTEM_INFORMATION_ALLWPM,
                         String.format(CHANNEL_HP_HOTGAS_TEMPERATURE_FORMAT, idx + 1)), UnDefType.UNDEF);
                 hpFeaturesObj.setReported(SysInfoHpFeaturelKeys.HP_TEMPERATURE_HOTGAS, true);
@@ -945,7 +945,7 @@ public class StiebelEltronHandlerAllWpm extends BaseThingHandler {
                                 String.format(CHANNEL_HP_LOW_PRESSURE_FORMAT, idx + 1)),
                         getScaled(block.heatPumps[idx].pressureLow, 100, BAR));
             } else if (!hpFeaturesObj.reported(SysInfoHpFeaturelKeys.HP_PRESSURE_LOW)) {
-                logger.trace("HP" + (idx + 1) + " Low pressure not available");
+                logger.trace("HP{} Low pressure not available", idx + 1);
                 updateState(channelUID(GROUP_SYSTEM_INFORMATION_ALLWPM,
                         String.format(CHANNEL_HP_LOW_PRESSURE_FORMAT, idx + 1)), UnDefType.UNDEF);
                 hpFeaturesObj.setReported(SysInfoHpFeaturelKeys.HP_PRESSURE_LOW, true);
@@ -956,7 +956,7 @@ public class StiebelEltronHandlerAllWpm extends BaseThingHandler {
                                 String.format(CHANNEL_HP_MEAN_PRESSURE_FORMAT, idx + 1)),
                         getScaled(block.heatPumps[idx].pressureMean, 100, BAR));
             } else if (!hpFeaturesObj.reported(SysInfoHpFeaturelKeys.HP_PRESSURE_MEAN)) {
-                logger.trace("HP" + (idx + 1) + " Mean pressure not available");
+                logger.trace("HP{} Mean pressure not available", idx + 1);
                 updateState(channelUID(GROUP_SYSTEM_INFORMATION_ALLWPM,
                         String.format(CHANNEL_HP_MEAN_PRESSURE_FORMAT, idx + 1)), UnDefType.UNDEF);
                 hpFeaturesObj.setReported(SysInfoHpFeaturelKeys.HP_PRESSURE_MEAN, true);
@@ -967,7 +967,7 @@ public class StiebelEltronHandlerAllWpm extends BaseThingHandler {
                                 String.format(CHANNEL_HP_HIGH_PRESSURE_FORMAT, idx + 1)),
                         getScaled(block.heatPumps[idx].pressureHigh, 100, BAR));
             } else if (!hpFeaturesObj.reported(SysInfoHpFeaturelKeys.HP_PRESSURE_HIGH)) {
-                logger.trace("HP" + (idx + 1) + " High pressure not available");
+                logger.trace("HP{} High pressure not available", idx + 1);
                 updateState(channelUID(GROUP_SYSTEM_INFORMATION_ALLWPM,
                         String.format(CHANNEL_HP_HIGH_PRESSURE_FORMAT, idx + 1)), UnDefType.UNDEF);
                 hpFeaturesObj.setReported(SysInfoHpFeaturelKeys.HP_PRESSURE_HIGH, true);
@@ -978,7 +978,7 @@ public class StiebelEltronHandlerAllWpm extends BaseThingHandler {
                                 String.format(CHANNEL_HP_FLOW_RATE_FORMAT, idx + 1)),
                         getScaled(block.heatPumps[idx].flowRate, 100, LITRE_PER_MINUTE));
             } else if (!hpFeaturesObj.reported(SysInfoHpFeaturelKeys.HP_FLOW_RATE)) {
-                logger.trace("HP" + (idx + 1) + " Flow rate not available");
+                logger.trace("HP{} Flow rate not available", idx + 1);
                 updateState(channelUID(GROUP_SYSTEM_INFORMATION_ALLWPM,
                         String.format(CHANNEL_HP_FLOW_RATE_FORMAT, idx + 1)), UnDefType.UNDEF);
                 hpFeaturesObj.setReported(SysInfoHpFeaturelKeys.HP_FLOW_RATE, true);
@@ -1362,7 +1362,7 @@ public class StiebelEltronHandlerAllWpm extends BaseThingHandler {
                                 String.format(CHANNEL_HP_CP12_HOTWATER_RUNTIME_FORMAT, idx + 1)),
                         new QuantityType<>(energyRuntimeBlock.heatPumps[0].runtimeCompressor12Hotwater, HOUR));
             } else if (!hpFeaturesObj.featureReported(EnergyRuntimeHpFeatureKeys.RUNTIMES)) {
-                logger.trace("HP" + (idx + 1) + " compressor runtimes not available");
+                logger.trace("HP{} compressor runtimes not available", idx + 1);
                 updateState(channelUID(GROUP_ENERGY_RUNTIME_INFO_ALLWPM,
                         String.format(CHANNEL_HP_CP1_HEATING_RUNTIME_FORMAT, idx + 1)), UnDefType.NULL);
                 updateState(channelUID(GROUP_ENERGY_RUNTIME_INFO_ALLWPM,
@@ -1384,7 +1384,7 @@ public class StiebelEltronHandlerAllWpm extends BaseThingHandler {
                                 String.format(CHANNEL_HP_COOLING_RUNTIME_FORMAT, idx + 1)),
                         new QuantityType<>(energyRuntimeBlock.heatPumps[0].runtimeCompressorCooling, HOUR));
             } else if (!hpFeaturesObj.featureReported(EnergyRuntimeHpFeatureKeys.COOLING_RUNTIME)) {
-                logger.trace("HP" + (idx + 1) + " cooling runtime not available");
+                logger.trace("HP{} cooling runtime not available", idx + 1);
                 updateState(channelUID(GROUP_ENERGY_RUNTIME_INFO_ALLWPM,
                         String.format(CHANNEL_HP_COOLING_RUNTIME_FORMAT, idx + 1)), UnDefType.NULL);
                 hpFeaturesObj.setFeatureReported(EnergyRuntimeHpFeatureKeys.COOLING_RUNTIME, true);
@@ -1469,7 +1469,12 @@ public class StiebelEltronHandlerAllWpm extends BaseThingHandler {
             updateState(
                     channelUID(GROUP_SG_READY_ENERGY_MANAGEMENT_SYSTEM_INFORMATION, CHANNEL_SG_READY_CONTROLLER_IDENT),
                     new DecimalType(block.sgReadyControllerIdentification));
+            // If the SgReady System Information Registers are available and the configured
+            // WPM ControllerID doesn't match, the one from the WPM is applied
             if (config.getWpmControllerId() != block.sgReadyControllerIdentification) {
+                int newWpmCtrlId = block.sgReadyControllerIdentification;
+                logger.info("Updating configured WPM Controller ID from '{}' to '{}' (read from SG Ready register)!",
+                        config.getWpmControllerId(), newWpmCtrlId);
                 config.setWpmControllerId(block.sgReadyControllerIdentification);
             }
         } else if (!sgReadyEnMgmtControl.featureReported(SgReadyEnMgmtFeatureKeys.EN_MGMT_SYS_INFO)) {

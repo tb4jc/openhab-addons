@@ -6,24 +6,25 @@
 
 	<thing-type id="stiebeleltron-heatpump-allwpm">
 		<supported-bridge-type-refs>
-			<bridge-type-ref id="tcp" />
-			<bridge-type-ref id="serial" />
+			<bridge-type-ref id="tcp"/>
+			<bridge-type-ref id="serial"/>
 		</supported-bridge-type-refs>
 		<label>Stiebel Eltron Heat Pump (WPM compatible)</label>
-		<description>A Stiebel Eltron Heat Pump (WPM compatible) thing with extended function support connected through Modbus to an ISG</description>
+		<description>A Stiebel Eltron Heat Pump (WPM compatible) thing with extended function support connected through Modbus
+			to an ISG</description>
 		<category>heating</category>
 
 		<channel-groups>
-			<channel-group id="systemInformationAllWpm" typeId="system-information-allwpm" />
-			<channel-group id="systemParameterAllWpm" typeId="system-parameter-allwpm" />
-			<channel-group id="systemStateAllWpm" typeId="system-state-allwpm" />
-			<channel-group id="energyRuntimeInformationAllWpm" typeId="energy-runtime-information-allwpm" />
-			<channel-group id="sgReadyEnergyManagementSettings" typeId="sg-ready-energy-management-settings" />
+			<channel-group id="systemInformationAllWpm" typeId="system-information-allwpm"/>
+			<channel-group id="systemParameterAllWpm" typeId="system-parameter-allwpm"/>
+			<channel-group id="systemStateAllWpm" typeId="system-state-allwpm"/>
+			<channel-group id="energyRuntimeInformationAllWpm" typeId="energy-runtime-information-allwpm"/>
+			<channel-group id="sgReadyEnergyManagementSettings" typeId="sg-ready-energy-management-settings"/>
 			<channel-group id="sgReadyEnergyManagementSystemInformation"
-				typeId="sg-ready-energy-management-system-information" />
+				typeId="sg-ready-energy-management-system-information"/>
 		</channel-groups>
 
-		<config-description-ref uri="thing-type:stiebeleltron:modbusconfig" />
+		<config-description-ref uri="thing-type:stiebeleltron:modbusconfig"/>
 
 	</thing-type>
 

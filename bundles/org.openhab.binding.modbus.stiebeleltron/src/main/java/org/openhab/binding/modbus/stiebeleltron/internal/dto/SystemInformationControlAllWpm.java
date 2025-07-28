@@ -104,7 +104,6 @@ public class SystemInformationControlAllWpm {
         for (int i = 0; i < nrOfHps; i++) {
             hpSysInfoList[i] = new SysInfoHpFeature();
         }
-
     }
 
     @Override
