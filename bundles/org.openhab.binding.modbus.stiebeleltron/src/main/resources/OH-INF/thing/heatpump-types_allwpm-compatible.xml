@@ -9,9 +9,8 @@
 			<bridge-type-ref id="tcp"/>
 			<bridge-type-ref id="serial"/>
 		</supported-bridge-type-refs>
-		<label>Stiebel Eltron Heat Pump (WPM compatible)</label>
-		<description>A Stiebel Eltron Heat Pump (WPM compatible) thing with extended function support connected through Modbus
-			to an ISG</description>
+		<label>@text/thing-type.modbus.stiebeleltron-heatpump-allwpm.label</label>
+		<description>@text/thing-type.modbus.stiebeleltron-heatpump-allwpm.description</description>
 		<category>heating</category>
 
 		<channel-groups>
